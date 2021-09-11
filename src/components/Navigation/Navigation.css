@@ -1,0 +1,22 @@
+.navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.navigation__item {
+  margin: 0;
+  padding-left: 16px;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1.38;
+}
+
+.navigation__item:first-child {
+  padding-left: 0;
+}
+
+.navigation__item_active {
+  font-weight: 500;
+}
