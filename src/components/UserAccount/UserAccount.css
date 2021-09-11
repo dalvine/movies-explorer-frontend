@@ -1,0 +1,29 @@
+.user-account {
+  margin: 0;
+  width: 86px;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.08);
+  border-radius: 40px;
+  padding-left:11px;
+  padding-right: 3px;
+  cursor: pointer;
+}
+
+.user-account__text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 12px;
+}
+
+.user-account__logo {
+  object-fit: contain;
+  width: 11px;
+  height: 11px;
+  background: #F9F9F9;
+  border-radius: 50px;
+  padding: 8px;
+}
