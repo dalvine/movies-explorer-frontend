@@ -9,7 +9,7 @@
   font-size: 22px;
   font-style: normal;
   font-weight: normal;
-  line-height: 27px;
+  line-height: 1.22;
   letter-spacing: -0.04em;
   border-bottom: 1px solid black;
 }
@@ -91,4 +91,55 @@
   font-size: 14px;
   line-height: 1.21;
   color: #A0A0A0;
+}
+
+@media screen and (max-width: 640px) {
+  .about-project__title {
+    padding-bottom: 28px;
+    font-size: 18px;
+  }
+
+  .about-project__descriptions {
+    width: 100%;
+    padding: 60px 0;
+    flex-direction: column;
+  }
+
+  .about-project__description {
+    padding-bottom: 56px;
+  }
+
+  .about-project__description:last-child {
+    padding-bottom: 0;
+  }
+
+  .story-line__backend {
+    width: 35%;
+  }
+
+  .story-line__frontend {
+    width: 65%;
+  }
+
+  .story-line__frontend, .story-line__backend {
+    font-size: 11px;
+    line-height: 1.18;
+  }
+  
+  .about-project__intro {
+    font-size: 18px;
+    letter-spacing: -0.04em;
+  }
+
+  .about-project__text {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+}
+
+@media screen and (max-width: 460px) {
+  .about-project {
+    padding: 70px 18px;
+  }
 }

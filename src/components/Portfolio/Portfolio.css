@@ -50,3 +50,23 @@
   position: absolute;
   right: 0;
 }
+
+@media screen and (max-width: 640px) {
+  .portfolio {
+    padding: 70px 14px;
+  }
+
+  .portfolio__title {
+    font-size: 14px;
+  line-height: 1.43;
+  }
+
+  .portfolio__link-list-item {
+    height: 48px;
+  }
+
+  .portfolio__link {
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}

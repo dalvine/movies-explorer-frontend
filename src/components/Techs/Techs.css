@@ -46,12 +46,13 @@
   padding: 100px 0 0 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .techs_tag {
   margin: 0;
-  margin-left: 10px;
+  margin-right: 10px;
   padding: 21px 0;
   box-sizing: border-box;
   width: 90px;
@@ -64,6 +65,36 @@
   letter-spacing: -0.04em;
 }
 
-.techs_tag:first-child {
-  margin-left: 0;
+.techs_tag:last-child {
+  margin-right: 0;
+}
+
+
+@media screen and (max-width: 860px) {
+  .techs {
+    padding: 70px 18px;
+  }
+
+  .techs__intro {
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .techs__text {
+    font-size: 11px;
+    line-height: 1.45;
+    text-align: center;
+  }
+
+  .techs_tag  {
+    margin-top: 10px;
+  }
+
+}
+
+@media screen and (max-width: 460px) {
+  .techs {
+    background: transparent;
+  }
 }

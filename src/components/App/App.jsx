@@ -13,13 +13,13 @@ import Portfolio from '../Portfolio/Portfolio'
 function App() {
   const [loggedIn, setLoggedIn] = React.useState(false)
 
-  const LogIn = () => {
-    setLoggedIn(true)
-  }
+  // const LogIn = () => {
+  //   setLoggedIn(true)
+  // }
 
-  const logOut = () => {
-    setLoggedIn(false)
-  }
+  // const logOut = () => {
+  //   setLoggedIn(false)
+  // }
 
   return (
     <div className="app">
