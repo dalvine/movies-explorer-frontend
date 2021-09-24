@@ -17,6 +17,7 @@
 
 .movies__title {
   margin: 0;
+  max-width: 50%;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -51,4 +52,64 @@
 
 .movies__like_active {
   background-image: url('../../images/like-active.svg');
+}
+
+.movies__remove {
+  margin-top: auto;
+  width: 14px;
+  height: 12px;
+  background-image: url('../../images/close.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 520px) {
+  .movies__card {
+    padding: 0;
+    height: auto;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .movies__image {
+    position: static;
+    object-fit: cover;
+    min-height: 240px;
+  }
+
+  .movies__title {
+    max-width: 70%;
+    margin-top: 14px;
+    margin-left: 12px;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .movies__duration {
+    padding: 0;
+    margin: 8px 12px 14px;
+    font-size: 11px;
+    line-height: 1.18;
+  }
+
+  .movies__like {
+    position: absolute;
+    bottom: 36px;
+    right: 16px;
+  }
+
+  .movies__remove {
+    position: absolute;
+    bottom: 36px;
+    right: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .movies__image {
+    min-height: 168px;
+  }
 }

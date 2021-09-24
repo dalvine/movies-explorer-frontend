@@ -27,3 +27,23 @@
   border-radius: 50px;
   padding: 8px;
 }
+
+@media screen and (max-width: 860px) {
+  .user-account {
+    display: none;
+  }
+
+  .user-account_active {
+    display: flex;
+    z-index: 2;
+    position: fixed;
+    bottom: 25px;
+    right: calc(260px - 86px/2);
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .user-account_active {
+    right: calc(50% - 86px/2);
+  }
+}

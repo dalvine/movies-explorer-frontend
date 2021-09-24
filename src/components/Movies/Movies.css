@@ -5,3 +5,15 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media screen and (max-width: 860px) {
+  .movies {
+    padding: 60px 30px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .movies {
+    padding: 60px 10px;
+  }
+}

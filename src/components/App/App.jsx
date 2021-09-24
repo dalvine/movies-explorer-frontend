@@ -9,9 +9,12 @@ import AboutProject from '../AboutProject/AboutProject';
 import Techs from "../Techs/Techs";
 import AboutMe from '../AboutMe/AboutMe'
 import Portfolio from '../Portfolio/Portfolio'
+import Profile from '../Profile/Profile';
+import Register from '../Register/Register'
+import Login from '../Login/Login'
 
 function App() {
-  const [loggedIn, setLoggedIn] = React.useState(false)
+  const [loggedIn, setLoggedIn] = React.useState(true)
 
   // const LogIn = () => {
   //   setLoggedIn(true)
@@ -23,11 +26,13 @@ function App() {
 
   return (
     <div className="app">
-      <Header loggedIn={loggedIn}/>
+      {/* <Header loggedIn={loggedIn}/> */}
       {loggedIn ?
       <>
-        <SearchForm />
-        <Movies />
+      {/* <Register /> */}
+      <Login />
+        {/* <SearchForm />
+        <Movies /> */}
       </> : 
       <>
         <Promo />
@@ -36,7 +41,7 @@ function App() {
         <AboutMe />
         <Portfolio />
       </>}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
