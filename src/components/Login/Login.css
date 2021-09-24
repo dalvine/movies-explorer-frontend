@@ -11,6 +11,9 @@
   margin: 0;
   margin-top: 40px;
   font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.21;
 }
 
 .login__form {
@@ -20,7 +23,7 @@
   justify-content: center;
 }
 
-.login__field {
+.login__field:last-of-type {
   margin-top: 24px;
 }
 
@@ -91,4 +94,27 @@
   text-align: center;
   color: #3456F3;
   text-decoration: none;
+}
+
+@media screen and (max-width: 860px) {
+  .login {
+    padding: 50px 30px 0;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .login {
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+  }
+
+  .login__submit {
+    justify-self: flex-end;
+  }
+
+  .login__text {
+    font-size: 12px;
+    line-height: 1.25;
+  }
 }

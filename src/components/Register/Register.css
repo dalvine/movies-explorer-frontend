@@ -11,6 +11,9 @@
   margin: 0;
   margin-top: 40px;
   font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.21;
 }
 
 .register__form {
@@ -20,7 +23,7 @@
   justify-content: center;
 }
 
-.register__field {
+.register__field:last-of-type {
   margin-top: 24px;
 }
 
@@ -91,4 +94,27 @@
   text-align: center;
   color: #3456F3;
   text-decoration: none;
+}
+
+@media screen and (max-width: 860px) {
+  .register {
+    padding: 50px 30px 0;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .register {
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+  }
+
+  .register__submit {
+    justify-self: flex-end;
+  }
+
+  .register__text {
+    font-size: 12px;
+    line-height: 1.25;
+  }
 }

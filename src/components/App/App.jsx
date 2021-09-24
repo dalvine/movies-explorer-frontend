@@ -16,21 +16,13 @@ import Login from '../Login/Login'
 function App() {
   const [loggedIn, setLoggedIn] = React.useState(true)
 
-  // const LogIn = () => {
-  //   setLoggedIn(true)
-  // }
-
-  // const logOut = () => {
-  //   setLoggedIn(false)
-  // }
-
   return (
     <div className="app">
       {/* <Header loggedIn={loggedIn}/> */}
       {loggedIn ?
       <>
-      {/* <Register /> */}
-      <Login />
+      <Register />
+      {/* <Login /> */}
         {/* <SearchForm />
         <Movies /> */}
       </> : 
