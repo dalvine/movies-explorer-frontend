@@ -1,6 +1,6 @@
+import React from 'react';
 import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard'
-import logoMovie from '../../images/logo-movie.png'
 
 function MoviesCardList({arrayMovies, isSavedMovie}) {
   return (

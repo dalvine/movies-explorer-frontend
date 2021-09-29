@@ -1,3 +1,4 @@
+import React from 'react';
 import './AboutProject.css';
 import ScrollableAnchor from 'react-scrollable-anchor'
 

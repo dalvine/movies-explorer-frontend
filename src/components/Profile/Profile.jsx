@@ -1,3 +1,4 @@
+import React from 'react';
 import './Profile.css';
 import {useHistory } from 'react-router-dom';
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import './SavedMovies.css';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import logoMovie from '../../images/logo-movie.png'

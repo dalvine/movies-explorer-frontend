@@ -1,3 +1,4 @@
+import React from 'react';
 import './AboutMe.css';
 import AboutMePhoto from '../../images/about-me-photo.png'
 import { ExternalLink } from 'react-external-link';

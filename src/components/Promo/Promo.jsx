@@ -1,3 +1,4 @@
+import React from 'react';
 import './Promo.css';
 import promoImage from "../../images/promo-WEB.png";
 

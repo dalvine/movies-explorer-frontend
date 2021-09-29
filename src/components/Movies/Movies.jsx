@@ -1,3 +1,4 @@
+import React from 'react';
 import './Movies.css';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import logoMovie from '../../images/logo-movie.png'

@@ -1,3 +1,4 @@
+import React from 'react';
 import './SearchForm.css';
 import icoSearch from '../../images/search-ico.svg'
 
