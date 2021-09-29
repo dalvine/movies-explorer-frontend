@@ -63,19 +63,3 @@ function App() {
 }
 
 export default App;
-
-
-// {/* <Header loggedIn={loggedIn}/> */}
-//       {/* <Register /> */}
-//       {/* <Login /> */}
-//         {/* <SearchForm />
-//         <Movies /> */}
-
-
-//         {/* <Promo />
-//         <AboutProject />
-//         <Techs />
-//         <AboutMe />
-//         <Portfolio /> */}
-
-//       {/* <Footer /> */}
