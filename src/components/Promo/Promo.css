@@ -43,7 +43,6 @@
 .promo__more {
   width: 129px;
   height: 36px;
-  margin-top: auto;
   outline: none;
   background-color: transparent;
   opacity: 0.6;
@@ -55,6 +54,10 @@
   line-height: 1.33;
   color: #FFFFFF;
   cursor: pointer;
+}
+
+.promo__link-btn {
+  margin-top: auto;
 }
 
 @media screen and (max-width: 860px) {

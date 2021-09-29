@@ -1,6 +1,8 @@
 import './Profile.css';
+import {useHistory } from 'react-router-dom';
 
 function Profile({name, email}) {
+  const history = useHistory()
   return (
     <div className="profile">
       <h1 className="profile__greeting">Привет, {name ? 'name' : 'Владислав'}!</h1>
@@ -15,8 +17,8 @@ function Profile({name, email}) {
         </div>
       </div>
       <div className="profile__control">
-        <button className="profile__edit">Редактировать</button>
-        <button className="profile__exit">Выйти из аккаунта</button>
+        <button className="profile__edit" onClick={() => history.push('/edit-profile')}>Редактировать</button>
+        <button className="profile__exit" onClick={() => history.push('/sign-up')}>Выйти из аккаунта</button>
       </div>
     </div>
   );

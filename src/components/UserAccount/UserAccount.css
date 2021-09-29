@@ -10,6 +10,13 @@
   padding-left:11px;
   padding-right: 3px;
   cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+.user-account:hover {
+  opacity: 0.8;
+  transition: all .4 linear;
 }
 
 .user-account__text {

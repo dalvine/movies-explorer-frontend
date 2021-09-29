@@ -21,6 +21,11 @@
   cursor: pointer;
   }
 
+  .movies__more:hover  {
+    opacity: 0.8;
+    transition: all .4 linear;
+  }
+
   @media screen and (max-width: 350px) {
     .movies__more {
       margin-bottom: 0;

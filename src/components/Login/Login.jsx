@@ -19,7 +19,7 @@ function Login() {
           <span className="login__input-error">Что-то пошло не так...</span>
         </div>
         <button className="login__submit">Войти</button>
-        <p className="login__text">Ещё не зарегистрированы? <a href="/register" className="login__link">Регистрация</a></p>
+        <p className="login__text">Ещё не зарегистрированы? <a href="/sign-up" className="login__link">Регистрация</a></p>
       </form>
     </div>
   );

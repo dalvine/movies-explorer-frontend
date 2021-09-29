@@ -56,6 +56,11 @@
   line-height: 1.23;
 }
 
+.footer__link:hover  {
+  opacity: 0.8;
+  transition: all .4 linear;
+}
+
 @media screen and (max-width: 460px) {
   .footer {
     padding: 79px 14px 0;
@@ -91,6 +96,7 @@
     font-size: 12px;
     line-height: 1.25;
   }
+
 
   .footer__copyright {
     font-size: 12px;

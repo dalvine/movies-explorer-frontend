@@ -24,7 +24,7 @@ function Register() {
           <span className="register__input-error">Что-то пошло не так...</span>
         </div>
         <button className="register__submit">Зарегистрироваться</button>
-        <p className="register__text">Уже зарегистрированы? <a href="/login" className="register__link">Войти</a></p>
+        <p className="register__text">Уже зарегистрированы? <a href="/sign-in" className="register__link">Войти</a></p>
       </form>
     </div>
   );

@@ -23,7 +23,7 @@
   justify-content: center;
 }
 
-.register__field:last-of-type {
+.register__field {
   margin-top: 24px;
 }
 

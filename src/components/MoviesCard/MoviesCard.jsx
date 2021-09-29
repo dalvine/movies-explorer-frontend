@@ -1,7 +1,7 @@
 import React from 'react';
 import './MoviesCard.css';
 
-function MoviesCard({title, duration, image, isSavedMovie}) {
+function MoviesCard({title, duration, logo, isSavedMovie}) {
   const [like, setLike] = React.useState(false)
 
   function changeLike() {
@@ -10,7 +10,7 @@ function MoviesCard({title, duration, image, isSavedMovie}) {
 
   return (
     <li className="movies__card">
-      <img className="movies__image" src={image} alt="logo" />
+      <img className="movies__image" src={logo} alt="logo" />
       <h2 className="movies__title">{ title }</h2>
       <p className="movies__duration">{ duration }</p>
       {isSavedMovie 

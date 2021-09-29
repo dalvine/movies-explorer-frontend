@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg'
 
 
 function Logo() {
   return (
-    <img className='logo' src={logo} alt='Логотип' /> 
+    <Link classname='logo__link' to="/" >
+      <img className='logo' src={logo} alt='Логотип' /> 
+    </Link>
   );
 }
 

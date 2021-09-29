@@ -64,6 +64,11 @@
   cursor: pointer;
 }
 
+.movies__remove:hover , .movies__like:hover  {
+  opacity: 0.8;
+  transition: all .4 linear;
+}
+
 
 @media screen and (max-width: 520px) {
   .movies__card {

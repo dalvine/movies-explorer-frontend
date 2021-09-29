@@ -58,6 +58,12 @@
   color: #FFFFFF;
   outline: none;
   border: none;
+  cursor: pointer;
+}
+
+.search__submit:hover {
+  opacity: 0.8;
+  transition: all .4 linear;
 }
 
 .search__divider {
