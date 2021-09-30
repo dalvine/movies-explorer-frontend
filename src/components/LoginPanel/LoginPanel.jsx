@@ -1,4 +1,5 @@
 import React from "react";
+import './LoginPanel.css';
 import { useHistory } from 'react-router-dom'
 
 function LoginPanel() {

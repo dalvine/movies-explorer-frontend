@@ -1,4 +1,5 @@
 import React from "react";
+import './UserAccount.css'
 import { Link } from "react-router-dom";
 import logoAccount from '../../images/logo-account.svg'
 
