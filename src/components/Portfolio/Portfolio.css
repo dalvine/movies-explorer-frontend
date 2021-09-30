@@ -51,6 +51,7 @@
 
 .portfolio__link::after {
   content: "↗";
+  margin-left: 40px;
   width: 29px;
   height: 60px;
   position: absolute;

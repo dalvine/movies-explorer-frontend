@@ -20,6 +20,14 @@
   justify-content: space-between;
 }
 
+.about-project__description {
+  margin-right: 30px;
+}
+
+.about-project__description:last-of-type {
+  margin-right: 0;
+}
+
 .about-project__intro {
   margin: 0;
   font-weight: normal;
