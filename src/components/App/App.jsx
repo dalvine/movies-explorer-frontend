@@ -14,6 +14,8 @@ import Profile from '../Profile/Profile'
 import SavedMovies from '../SavedMovies/SavedMovies'
 import EditProfile from '../EditProfile/EditProfile'
 import urlIcon from '../../images/icon.ico'
+import NotFound from '../NotFound/NotFound'
+import Preloader from '../Preloader/Preloader'
 
 function App() {
   const [loggedIn, setLoggedIn] = React.useState(true)
@@ -54,12 +56,11 @@ function App() {
             <Header loggedIn={loggedIn}/>
             <EditProfile />
           </Route>
-          <Route path="/sign-up">
-            {loggedIn ? <Redirect to='/' /> : <Register />}
-          </Route> 
+          <Route path="*" component={Preloader} />
+
         </Switch>
     </div>
-  );
+    );
 }
 
 export default App;
