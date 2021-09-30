@@ -77,6 +77,11 @@
   cursor: pointer;
 }
 
+.login__submit:hover {
+  opacity: 0.7;
+  transition: all .4 linear;
+}
+
 .login__text {
   padding-top: 16px;
   margin: 0;
@@ -94,6 +99,11 @@
   text-align: center;
   color: #3456F3;
   text-decoration: none;
+}
+
+.login__link:hover {
+  opacity: 0.7;
+  transition: all .4 linear;
 }
 
 @media screen and (max-width: 860px) {

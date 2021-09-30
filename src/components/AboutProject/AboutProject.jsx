@@ -1,11 +1,11 @@
 import React from 'react';
 import './AboutProject.css';
-import ScrollableAnchor from 'react-scrollable-anchor'
+// import ScrollableAnchor from 'react-scrollable-anchor'
 
 function AboutProject() {
   return (
-    <ScrollableAnchor id={'about'}>
-      <section className="about-project">
+    // <ScrollableAnchor id={'about'}>
+    <section className="about-project">
       <h2 className="about-project__title">О проекте</h2>
       <div className="about-project__descriptions">
         <div className="about-project__description">
@@ -22,8 +22,8 @@ function AboutProject() {
         <p className="story-line__frontend">4 недели</p>
       </div>
     </section>
-    </ScrollableAnchor>
-  );
+  // </ScrollableAnchor>
+  )
 }
 
 export default AboutProject;

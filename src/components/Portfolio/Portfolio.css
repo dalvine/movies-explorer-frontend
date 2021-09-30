@@ -43,6 +43,12 @@
   letter-spacing: -0.04em;
 }
 
+.portfolio__link:hover {
+  opacity: 0.7;
+  transition: all .4 linear;
+}
+
+
 .portfolio__link::after {
   content: "↗";
   width: 29px;
