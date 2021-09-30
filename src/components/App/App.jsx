@@ -17,7 +17,7 @@ import urlIcon from '../../images/icon.ico'
 import NotFound from '../NotFound/NotFound'
 
 function App() {
-  const [loggedIn, setLoggedIn] = React.useState(true)
+  const [loggedIn, setLoggedIn] = React.useState(false)
 
   return (
     <div className="app">

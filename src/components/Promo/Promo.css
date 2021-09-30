@@ -56,6 +56,11 @@
   cursor: pointer;
 }
 
+.promo__more:hover {
+  opacity: 0.7;
+  transition: all .4 linear;
+}
+
 .promo__link-btn {
   margin-top: auto;
 }

@@ -23,6 +23,11 @@
   cursor: pointer;
 }
 
+.login-panel__login:hover, .login-panel__reg:hover {
+  opacity: 0.7;
+  transition: all .4 linear;
+}
+
 @media screen and (max-width: 460px) {
   .login-panel__reg {
     font-size: 10px;
