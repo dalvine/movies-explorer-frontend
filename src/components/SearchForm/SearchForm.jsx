@@ -7,7 +7,7 @@ function SearchForm() {
     <div className="search">
       <form className="search__form">
         <img className="search__ico" src={icoSearch} alt="поиск" />
-        <input className="search__input" type="text" name="value" placeholder="Фильм"/>
+        <input className="search__input" type="text" name="value" placeholder="Фильм" required/>
         <button className="search__submit" type="submit">Найти</button>
         <div className="search__divider"></div>
         <input className="search__checkbox" type="checkbox" name="shortFilm" id="shortFilm" />
@@ -19,7 +19,7 @@ function SearchForm() {
         </label>
       </form>
     </div>
-  );
+    );
 }
 
 export default SearchForm;

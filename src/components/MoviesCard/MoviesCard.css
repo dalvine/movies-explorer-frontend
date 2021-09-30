@@ -56,8 +56,8 @@
 
 .movies__remove {
   margin-top: auto;
-  width: 14px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   background-image: url('../../images/close.svg');
   background-position: center;
   background-repeat: no-repeat;
