@@ -58,7 +58,7 @@
   margin-top: auto;
   width: 8px;
   height: 8px;
-  background-image: url('../../images/close.svg');
+  background-image: url('../../images/remove.svg');
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
