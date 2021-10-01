@@ -1,0 +1,42 @@
+.login-panel__reg {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.login-panel__login {
+  margin-left: 30px;
+  outline: none;
+  border: none;
+  width: 76px;
+  height: 32px;
+  background: #2BE080;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  cursor: pointer;
+}
+
+.login-panel__login:hover, .login-panel__reg:hover {
+  opacity: 0.7;
+  transition: all .4 linear;
+}
+
+@media screen and (max-width: 460px) {
+  .login-panel__reg {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .login-panel__login {
+    margin-left: 14px;
+    font-size: 10px;
+    line-height: 1.6;
+  }
+}

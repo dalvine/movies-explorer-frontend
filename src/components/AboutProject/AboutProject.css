@@ -1,0 +1,153 @@
+.about-project {
+  margin: 0;
+  padding: 110px 70px;;
+}
+
+.about-project__title {
+  margin: 0;
+  padding-bottom: 23px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.22;
+  letter-spacing: -0.04em;
+  border-bottom: 1px solid black;
+}
+
+.about-project__descriptions {
+  padding: 70px 0 110px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-project__description {
+  margin-right: 30px;
+}
+
+.about-project__description:last-of-type {
+  margin-right: 0;
+}
+
+.about-project__intro {
+  margin: 0;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.about-project__text {
+  margin: 0;
+  padding-top: 26px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.43;
+}
+
+.story-line {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.story-line__backend {
+  margin: 0;
+  width: 20%;
+  padding: 9px 14px;
+  position: relative;
+  box-sizing: border-box;
+  background: #2BE080;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: center;
+}
+
+.story-line__frontend {
+  margin: 0;
+  width: 80%;
+  padding: 9px 14px;
+  position: relative;
+  box-sizing: border-box;
+  background: #F2F2F2;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: center;
+}
+
+.story-line__frontend::after {
+  content: 'Front-end';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+  color: #A0A0A0;
+}
+
+.story-line__backend::after {
+  content: 'Back-end';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+  color: #A0A0A0;
+}
+
+@media screen and (max-width: 640px) {
+  .about-project__title {
+    padding-bottom: 28px;
+    font-size: 18px;
+  }
+
+  .about-project__descriptions {
+    width: 100%;
+    padding: 60px 0;
+    flex-direction: column;
+  }
+
+  .about-project__description {
+    padding-bottom: 56px;
+  }
+
+  .about-project__description:last-child {
+    padding-bottom: 0;
+  }
+
+  .story-line__backend {
+    width: 35%;
+  }
+
+  .story-line__frontend {
+    width: 65%;
+  }
+
+  .story-line__frontend, .story-line__backend {
+    font-size: 11px;
+    line-height: 1.18;
+  }
+  
+  .about-project__intro {
+    font-size: 18px;
+    letter-spacing: -0.04em;
+  }
+
+  .about-project__text {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+}
+
+@media screen and (max-width: 460px) {
+  .about-project {
+    padding: 70px 18px;
+  }
+}

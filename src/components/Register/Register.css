@@ -1,0 +1,130 @@
+.register {
+  margin: 0 auto;
+  max-width: 396px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register__greeting {
+  margin: 0;
+  margin-top: 40px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.21;
+}
+
+.register__form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register__field {
+  margin-top: 24px;
+}
+
+.register__input-title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #A0A0A0;
+}
+
+.register__input {
+  margin: 0;
+  padding: 5px 0;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px #E8E8E8 solid;
+  font-size: 14px;
+  line-height: 1.21;
+}
+
+.register__input_status_error {
+  color: #FF3055;
+}
+
+.register__input:focus {
+  border-bottom: 1px #3456F3 solid;
+}
+
+.register__input-error {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #FF3055;
+}
+
+.register__submit {
+  margin-top: 134px;
+  width: 100%;
+  height: 45px;
+  outline: none;
+  border:none;
+  background-color: #3456F3;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+  color: #FFFFFF;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.register__submit:hover {
+  opacity: 0.7;
+  transition: all .4 linear;
+}
+
+.register__text {
+  padding-top: 16px;
+  margin: 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: center;
+  color: #A0A0A0;
+}
+
+.register__link {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: center;
+  color: #3456F3;
+  text-decoration: none;
+}
+
+.register__link:hover {
+  opacity: 0.7;
+  transition: all .4 linear;
+}
+
+@media screen and (max-width: 860px) {
+  .register {
+    padding: 50px 30px 0;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .register {
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+  }
+
+  .register__submit {
+    justify-self: flex-end;
+  }
+
+  .register__text {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
