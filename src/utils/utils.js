@@ -1,0 +1,1 @@
+export const listRouteWithHideHeader = ['/sign-in', '/sign-up']

@@ -2,6 +2,7 @@
   margin: 0 auto;
   max-width: 396px;
   height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,6 +76,16 @@
   color: #FFFFFF;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.register__submit:disabled {
+  background-color: #E8E8E8;
+  color: rgb(141, 141, 141);
+  cursor: default;
+}
+
+.register__submit:disabled:hover {
+  opacity: 1;
 }
 
 .register__submit:hover {

@@ -17,6 +17,10 @@
   bottom: 0;
 }
 
+.search_without-border::after {
+  content: none;
+}
+
 .search__form {
   position: relative;
   width: 100%;

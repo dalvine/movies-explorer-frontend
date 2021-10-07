@@ -77,6 +77,16 @@
   cursor: pointer;
 }
 
+.login__submit:disabled {
+  background-color: #E8E8E8;
+  color: rgb(141, 141, 141);
+  cursor: default;
+}
+
+.login__submit:disabled:hover {
+  opacity: 1;
+}
+
 .login__submit:hover {
   opacity: 0.7;
   transition: all .4 linear;

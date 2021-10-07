@@ -26,6 +26,14 @@
     transition: all .4 linear;
   }
 
+  .movies__text {
+    margin: 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+  }
+
   @media screen and (max-width: 350px) {
     .movies__more {
       margin-bottom: 0;

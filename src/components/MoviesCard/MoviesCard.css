@@ -34,10 +34,14 @@
 }
 
 .movies__image {
+  width: 220px;
+  height: 122px;
   position: absolute;
   right: 6px;
   top: 6px;
   bottom: 6px;
+  object-fit: fill;
+  overflow: hidden;
 }
 
 .movies__like {

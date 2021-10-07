@@ -1,7 +1,8 @@
 import React from 'react';
+import { ExternalLink } from 'react-external-link';
 import './MoviesCard.css';
 
-function MoviesCard({title, duration, logo, isSavedMovie}) {
+function MoviesCard({title, duration, logo, isSavedMovie, trailerLink}) {
   const [like, setLike] = React.useState(false)
 
   function changeLike() {
@@ -10,7 +11,7 @@ function MoviesCard({title, duration, logo, isSavedMovie}) {
 
   return (
     <li className="movies__card">
-      <img className="movies__image" src={logo} alt="logo" />
+      <ExternalLink href={ trailerLink }><img className="movies__image" src={logo} alt="logo" /></ExternalLink>
       <h2 className="movies__title">{ title }</h2>
       <p className="movies__duration">{ duration }</p>
       {isSavedMovie 
