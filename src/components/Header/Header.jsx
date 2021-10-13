@@ -5,7 +5,7 @@ import Logo from '../Logo/Logo'
 import UserAccount from '../UserAccount/UserAccount'
 import Navigation from '../Navigation/Navigation'
 import LoginPanel from '../LoginPanel/LoginPanel'
-import {listRouteWithHideHeader} from '../../utils/utils'
+import { listRouteWithHideHeader } from '../../utils/utils'
 
 
 function Header({ loggedIn }) {

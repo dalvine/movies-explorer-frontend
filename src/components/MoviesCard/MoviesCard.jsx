@@ -1,21 +1,54 @@
 import React from 'react';
 import { ExternalLink } from 'react-external-link';
 import './MoviesCard.css';
+import MainApi from '../../utils/MainApi'
 
-function MoviesCard({title, duration, logo, isSavedMovie, trailerLink}) {
+function MoviesCard({_id, movieId, nameRU, nameEN, image,  duration, thumbnail, trailer, country, director, year, description, isSavedMovie, deleteMovie }) {
   const [like, setLike] = React.useState(false)
+  const [ idAddedMovie, setIdAddedMovie ] = React.useState(false)
+
+  React.useEffect(() => {
+    if(!isSavedMovie) {
+
+      MainApi.getMovies()
+      .then( movies => {
+        setLike(movies.some(movie => movie.nameRU === nameRU))
+      })
+    }
+  }, [isSavedMovie, nameRU])
 
   function changeLike() {
-    setLike(!like)
+    const data = {movieId: _id, nameRU, nameEN, image,  duration, thumbnail, trailer, country, director, year, description}
+    try {
+        if(like) {
+        data['_id'] = idAddedMovie
+        MainApi.removeMovie(data)
+          .then(() => setLike(false))
+      } else {
+        MainApi.addMovie(data)
+          .then((res) => {
+            setIdAddedMovie(res._id)
+            setLike(true)
+          })
+      }
+    } catch(e) {
+      alert(`Произошла ошибка. ${e.message}`)
+    }
+  }
+
+  const convertMinutesToHours = (value) => {
+    const hours = Math.floor(value/60)
+    const minutes = value - hours * 60
+    return `${hours} ч ${minutes} мин`
   }
 
   return (
-    <li className="movies__card">
-      <ExternalLink href={ trailerLink }><img className="movies__image" src={logo} alt="logo" /></ExternalLink>
-      <h2 className="movies__title">{ title }</h2>
-      <p className="movies__duration">{ duration }</p>
+    <li key={ movieId } className="movies__card">
+      <ExternalLink href={ trailer }><img className="movies__image" src={thumbnail} alt="logo" /></ExternalLink>
+      <h2 className="movies__title">{ nameRU }</h2>
+      <p className="movies__duration">{ convertMinutesToHours(duration) }</p>
       {isSavedMovie 
-      ? (<div className='movies__remove' onClick={() => console.log('remove movie')}></div>)
+      ? (<div className='movies__remove' onClick={ () => deleteMovie(_id) }></div>)
       : (<div className={`movies__like ${like ? 'movies__like_active': ''}`} onClick={changeLike}></div>) }
     </li>
   );

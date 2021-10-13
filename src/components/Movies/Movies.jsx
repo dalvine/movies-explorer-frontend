@@ -3,7 +3,6 @@ import './Movies.css';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import SearchForm from '../SearchForm/SearchForm';
 import Footer from '../Footer/Footer'
-import moviesApi from '../../utils/MoviesApi'
 import Preloader from '../Preloader/Preloader'
 
 function Movies() {
@@ -14,14 +13,13 @@ function Movies() {
   async function getMovie(searchData) {
     setIsLoading(true)
     setCountRequest(countRequest + 1)
-  let movies = await moviesApi.getMovies().catch(err => console.log(err))
+  let movies = JSON.parse(localStorage.getItem('movies'))
     if(searchData.shortFilm) {
       movies = movies.filter((movie) => {
         return movie.duration < 40
       })
     }
     setCurrentMovies(movies.filter(movie => {
-        console.log('фильтрую по слову')
         return movie.nameRU.toLowerCase().includes(searchData.value)
       }))
 

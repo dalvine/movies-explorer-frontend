@@ -1,21 +1,26 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import './Login.css';
-import auth from '../../utils/auth'
-import api from '../../utils/api'
 import Logo from '../Logo/Logo'
+import MainApi from '../../utils/MainApi'
 
-function Login(setLoggedIn) {
+function Login({ setLoggedIn }) {
   const [userData, setUserData] = React.useState({})
   const [formValid, setFormValid] = React.useState(false)
   const [emailError, setEmailError] = React.useState('')
   const [passwordError, setPasswordError] = React.useState('')
+  const history = useHistory()
 
   React.useEffect(() => {
     if (emailError || passwordError) {
-      return setFormValid(true)
+      return setFormValid(false)
     }
-    setFormValid(false)
+    setFormValid(true)
   }, [emailError, passwordError])
+
+  React.useEffect(() => {
+    if (!(userData.password && userData.email)) setFormValid(false)
+  }, [userData.password, userData.email])
 
   const validityInput = input => {
     if (!input.checkValidity()) {
@@ -59,16 +64,15 @@ function Login(setLoggedIn) {
 
   const handleSubmit = e => {
     e.preventDefault()
-    auth.authorization(userData)
+    MainApi.authorization(userData)
       .then(data => {
         localStorage.setItem('token', data.token)
-        api._addTokenToHeaders(data.token)
+        MainApi.addTokenToHeaders(data.token)
         setLoggedIn(true)
+        history.push('/movies')
       })
-      .catch((e) => {
-        // Promise.resolve(e)
-        //   .then(err => err.then(error => alert(`Ошибка! ${error.message}`)))
-        console.log(e)
+      .catch((err) => {
+        err.then((err)=>alert(`Ошибка. ${err.message}`))
         setUserData({})
       })
       .finally(() => {
@@ -89,10 +93,10 @@ function Login(setLoggedIn) {
         </div>
         <div className="login__field">
           <p className="login__input-title">Пароль</p>
-          <input type="password" className={`login__input ${passwordError ? "login__input_status_error" : ""}`} name="password" value={userData.password || ''} onChange={handleChange} minlength="5" required/>
+          <input type="password" className={`login__input ${passwordError ? "login__input_status_error" : ""}`} name="password" value={userData.password || ''} onChange={handleChange} minLength={5} required/>
           {passwordError ? (<span className="login__input-error">{passwordError}</span>) : ''}
         </div>
-        <button className="login__submit" disabled={formValid}>Войти</button>
+        <button className="login__submit" disabled={!formValid}>Войти</button>
         <p className="login__text">Ещё не зарегистрированы? <a href="/sign-up" className="login__link">Регистрация</a></p>
       </form>
     </div>

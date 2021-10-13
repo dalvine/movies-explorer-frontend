@@ -12,11 +12,11 @@ function SearchForm({onSubmit, countItemInResponse}) {
 
   const handleChangeCheckbox = (e) => {
     setSearchData({...searchData, shortFilm: e.target.checked})
+    if (searchData.value && countItemInResponse) onSubmit({...searchData, shortFilm: e.target.checked})
   }
 
   const changeSubmit = (e) => {
     e.preventDefault()
-    console.log(searchData)
     onSubmit(searchData)
   }
 

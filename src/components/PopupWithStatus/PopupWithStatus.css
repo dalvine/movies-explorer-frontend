@@ -1,0 +1,108 @@
+.popup {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s linear, visibility .3s linear;
+  transition: opacity .3s linear, visibility .3s linear;
+}
+
+.popup_opened {
+  visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+.popup__close {
+  padding: 0;
+  background-image: url(../../images/close.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  color: white;
+  cursor: pointer;
+}
+
+.popup__close:hover {
+  opacity: 0.6;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+@media screen and (max-width: 626px) {
+  .popup__close {
+    right: 0;
+  }
+}
+
+.popup__container {
+  margin: 0;
+  padding: 31px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  max-width: 440px;
+  width: 90%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 440px) {
+  .popup__container {
+    max-width: 90%;
+  }
+}
+
+.status-modal {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 36px 60px;
+  box-sizing: border-box;
+}
+
+.status-modal__img {
+  margin: 0 auto;
+}
+
+.status-modal__text {
+  margin: 0;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.21;
+  text-align: center;
+  color: #000000;
+  margin-top: 32px;
+}
