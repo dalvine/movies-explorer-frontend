@@ -12,6 +12,22 @@ function Login({ setLoggedIn }) {
   const history = useHistory()
 
   React.useEffect(() => {
+    const checkError = () => {
+      if (emailError || passwordError) {
+        return setFormValid(false)
+      } else {
+        setFormValid(true)
+      }
+    }
+
+    if (!(userData.email && userData.password)) {
+      setFormValid(false)
+    } else {
+      checkError()
+    }
+  }, [userData.email, userData.password, emailError, passwordError])
+
+  React.useEffect(() => {
     if (emailError || passwordError) {
       return setFormValid(false)
     }

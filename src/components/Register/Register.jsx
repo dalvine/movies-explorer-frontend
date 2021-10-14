@@ -17,15 +17,20 @@ function Register({ setLoggedIn }) {
   const history = useHistory()
 
   React.useEffect(() => {
-    if (nameError || emailError || passwordError) {
-      return setFormValid(false)
+    const checkError = () => {
+      if (nameError || emailError || passwordError) {
+        return setFormValid(false)
+      } else {
+        setFormValid(true)
+      }
     }
-    setFormValid(true)
-  }, [nameError, emailError, passwordError])
 
-  React.useEffect(() => {
-    if (!(userData.name && userData.email && userData.password)) setFormValid(false)
-  }, [userData.name, userData.email, userData.password])
+    if (!(userData.name && userData.email && userData.password)) {
+      setFormValid(false)
+    } else {
+      checkError()
+    }
+  }, [userData.name, userData.email, userData.password, nameError, emailError, passwordError])
 
   const validityInput = input => {
     if (!input.checkValidity()) {

@@ -19,16 +19,20 @@ function EditProfile() {
   const history = useHistory()
 
   React.useEffect(() => {
-    if (emailError || nameError) {
-      return setFormValid(false)
+    const checkError = () => {
+      if (emailError || nameError) {
+        return setFormValid(false)
+      } else {
+        setFormValid(true)
+      }
     }
-    setFormValid(true)
-  }, [emailError, nameError] 
-  )
 
-  React.useEffect(() => {
-    if (!(userData.name && userData.email)) setFormValid(false)
-  }, [userData.name, userData.email])
+    if (!(userData.email && userData.name)) {
+      setFormValid(false)
+    } else {
+      checkError()
+    }
+  }, [userData.email, userData.name, emailError, nameError])
 
   const validityInput = input => {
     if (!input.checkValidity()) {
