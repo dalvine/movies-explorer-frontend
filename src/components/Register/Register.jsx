@@ -18,7 +18,7 @@ function Register({ setLoggedIn }) {
 
   React.useEffect(() => {
     if (nameError || emailError || passwordError) {
-      return setFormValid(true)
+      return setFormValid(false)
     }
     setFormValid(true)
   }, [nameError, emailError, passwordError])

@@ -97,7 +97,7 @@ class MainApi {
 }
 
 export default new MainApi({
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'https://api.film-curator.nomoredomains.club',
   headers: {
     'Content-Type': 'application/json'
   }

@@ -22,6 +22,7 @@ function MoviesCard({_id, movieId, nameRU, nameEN, image,  duration, thumbnail, 
     try {
         if(like) {
         data['_id'] = idAddedMovie
+        console.log(data)
         MainApi.removeMovie(data)
           .then(() => setLike(false))
       } else {
