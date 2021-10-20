@@ -13,7 +13,7 @@ function Register({ setLoggedIn }) {
   const [nameError, setNameError] = React.useState('')
   const [emailError, setEmailError] = React.useState('')
   const [passwordError, setPasswordError] = React.useState('')
-  const [errorRegistrationMeesage, setErrorRegistrationMeesage] = React.useState('')
+  const [errorRegistrationMessage, setErrorRegistrationMessage] = React.useState('')
   const history = useHistory()
 
   React.useEffect(() => {
@@ -84,7 +84,7 @@ function Register({ setLoggedIn }) {
         setStatusReg(true)
       })
       .catch(err => {
-        err.then(error => setErrorRegistrationMeesage(error.message))
+        err.then(error => setErrorRegistrationMessage(error.message))
         setStatusReg(false)
       })
       .finally(() => {
@@ -132,7 +132,7 @@ function Register({ setLoggedIn }) {
           <p className="register__text">Уже зарегистрированы? <a href="/sign-in" className="register__link">Войти</a></p>
         </form>
       </div>
-      <PopupWithStatus statusModal={statusReg} isOpen={openModalResultRegister} errorMeesage={errorRegistrationMeesage} successMessage='Успешная регистрация' onClose={onCloseModalResultRegister}/>
+      <PopupWithStatus statusModal={statusReg} isOpen={openModalResultRegister} errorMessage={errorRegistrationMessage} successMessage='Успешная регистрация' onClose={onCloseModalResultRegister}/>
     </>
     );
 }
