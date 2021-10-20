@@ -1,3 +1,3 @@
 # URL
 
-https://api.film-curator.nomoredomains.club
+https://film-curator.nomoredomains.club
