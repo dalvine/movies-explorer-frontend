@@ -4,6 +4,7 @@ import './Register.css';
 import MainApi from '../../utils/MainApi'
 import PopupWithStatus from '../PopupWithStatus/PopupWithStatus'
 import Logo from '../Logo/Logo'
+import { checkValidityEmail } from '../../utils/utils'
 
 function Register({ setLoggedIn }) {
   const [statusReg, setStatusReg] = React.useState(false)
@@ -30,6 +31,7 @@ function Register({ setLoggedIn }) {
     } else {
       checkError()
     }
+
   }, [userData.name, userData.email, userData.password, nameError, emailError, passwordError])
 
   const validityInput = input => {
@@ -75,6 +77,7 @@ function Register({ setLoggedIn }) {
       [name]: value
     })
     validityInput(e.target)
+    if (name === "email") checkValidityEmail(value, setFormValid, setEmailError)
   }
 
   const handleSubmit = e => {
@@ -105,7 +108,7 @@ function Register({ setLoggedIn }) {
       .catch(err => err.then((err)=>alert(`Ошибка. ${err.message}`)))
     }
     setOpenModalResultRegister(false)
-}
+  }
 
   return (
     <>
@@ -125,7 +128,7 @@ function Register({ setLoggedIn }) {
           </div>
           <div className="register__field">
             <p className="register__input-title">Пароль</p>
-            <input type="password" className={`register__input ${passwordError ? "register__input_status_error" : ""}`} name="password" value={userData.password || ''} onChange={handleChange} required/>
+            <input type="password" className={`register__input ${passwordError ? "register__input_status_error" : ""}`} name="password" value={userData.password || ''} onChange={handleChange} minLength="5" required/>
             {passwordError ? (<span className="register__input-error">{passwordError}</span>) : ''}
           </div>
           <button className="register__submit" disabled={!formValid}>Зарегистрироваться</button>

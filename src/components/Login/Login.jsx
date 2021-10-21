@@ -3,6 +3,7 @@ import { useHistory } from 'react-router';
 import './Login.css';
 import Logo from '../Logo/Logo'
 import MainApi from '../../utils/MainApi'
+import { checkValidityEmail } from '../../utils/utils'
 
 function Login({ setLoggedIn }) {
   const [userData, setUserData] = React.useState({})
@@ -23,16 +24,9 @@ function Login({ setLoggedIn }) {
     if (!(userData.email && userData.password)) {
       setFormValid(false)
     } else {
-      checkError()
+      checkError() 
     }
   }, [userData.email, userData.password, emailError, passwordError])
-
-  React.useEffect(() => {
-    if (emailError || passwordError) {
-      return setFormValid(false)
-    }
-    setFormValid(true)
-  }, [emailError, passwordError])
 
   React.useEffect(() => {
     if (!(userData.password && userData.email)) setFormValid(false)
@@ -76,6 +70,7 @@ function Login({ setLoggedIn }) {
       [name]: value
     })
     validityInput(e.target)
+    if (name === "email") checkValidityEmail(value, setFormValid, setEmailError)
   }
 
   const handleSubmit = e => {
