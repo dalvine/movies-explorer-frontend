@@ -1,0 +1,134 @@
+.about-me {
+  margin: 0;
+  width: 100%;
+  padding: 110px 70px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.about-me__title {
+  margin: 0;
+  padding-bottom: 23px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.22;
+  letter-spacing: -0.04em;
+  border-bottom: 1px solid black;
+}
+
+.about-me__description {
+  position: relative;
+  margin-top: 66px;
+}
+
+.about-me__photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 210px;
+  height: 327px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-me__name {
+  margin: 0;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 1.16;
+  letter-spacing: -0.04em;
+}
+
+.about-me__job-age {
+  margin: 0;
+  padding-top: 18px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.11;
+}
+
+.about-me__biography {
+  margin: 0;
+  padding-top: 26px;
+  max-width: 50%;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.57;
+}
+
+.about-me__social {
+  margin: 0;
+  padding: 100px 0 0 0;
+  list-style: none;
+  display: flex;
+}
+
+
+.about-me__item {
+  padding-left: 20px;
+}
+
+.about-me__item:first-child {
+  padding-left: 0;
+}
+
+.about-me__link {
+  margin: 0;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+}
+
+.about-me__link:hover {
+  opacity: 0.8;
+  transition: all .4 linear;
+}
+
+
+@media screen and (max-width: 640px) {
+  .about-me__title {
+    padding-bottom: 28px;
+    font-size: 18px;
+  }
+
+  .about-me__photo {
+    position: static;
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .about-me__name {
+    margin-top: 40px;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .about-me__job-age {
+    padding-top: 20px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .about-me__biography {
+    padding-top: 20px;
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+  
+  .about-me__social {
+    padding-top: 40px;
+  }
+
+}
+
+@media screen and (max-width: 460px) {
+  .about-me {
+    padding: 70px 14px 0;
+  }
+}
