@@ -55,14 +55,16 @@ function App() {
     if (!token) {
       setLoggedIn(false)
     } else {
-      if (!localStorage.getItem('movies')) {
+      const movies = localStorage.getItem('movies')
+      const user = JSON.parse(localStorage.getItem('user'))
+      if (!movies) {
       moviesApi.getMovies()
           .then(movies => {
               localStorage.setItem('movies', JSON.stringify(movies))
               }
           )
       }
-      if (!localStorage.getItem('user')) {
+      if (!user) {
         MainApi.getToken(token)
         .then(data => {
           MainApi.addTokenToHeaders(token)
@@ -74,6 +76,8 @@ function App() {
           localStorage.clear()
           setLoggedIn(false)
         })
+      } else {
+        setСurrentUser(user)
       }
       MainApi.addTokenToHeaders(token)
       setLoggedIn(true)
