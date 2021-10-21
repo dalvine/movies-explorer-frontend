@@ -4,10 +4,12 @@ import icoSearch from '../../images/search-ico.svg'
 
 function SearchForm({onSubmit, countItemInResponse}) {
   const [searchData, setSearchData] = React.useState({})
+  const [placeholder, setPlaceholder] = React.useState('')
 
   const handleChangeRequest = e => {
     const { value } = e.target
     setSearchData({...searchData, value})
+    setPlaceholder('')
   }
 
   const handleChangeCheckbox = (e) => {
@@ -17,17 +19,22 @@ function SearchForm({onSubmit, countItemInResponse}) {
 
   const changeSubmit = (e) => {
     e.preventDefault()
-    onSubmit(searchData)
+    if(!searchData.value) {
+      setPlaceholder('Нужно ввести ключевое слово') 
+    } else {
+      setPlaceholder('')
+      onSubmit(searchData)
+    }
   }
 
   return (
     <div className={`search ${countItemInResponse ? '' : 'search_without-border'}`}>
       <form className="search__form" onSubmit={changeSubmit}>
         <img className="search__ico" src={icoSearch} alt="поиск" />
-        <input className="search__input" type="text" name="value" onChange={handleChangeRequest} value={searchData.value || ''} placeholder="Фильм" required/>
+        <input className="search__input" type="text" name="value" onChange={handleChangeRequest} value={searchData.value || ''} placeholder={placeholder}/>
         <button className="search__submit" type="submit">Найти</button>
         <div className="search__divider"></div>
-        <input className="search__checkbox" type="checkbox" name="shortFilm" id="shortFilm" onChange={handleChangeCheckbox} />
+        <input className="search__checkbox" type="checkbox" name="shortFilm" id="shortFilm" onChange={handleChangeCheckbox}/>
         <label className="checkbox" htmlFor="shortFilm">
           <div className="checkbox__switch">
             <div className="checkbox__tumbler"></div>

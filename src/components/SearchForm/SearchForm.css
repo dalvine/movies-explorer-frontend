@@ -54,6 +54,22 @@
   box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.08);
 }
 
+.search__input::-webkit-input-placeholder {
+  color:rgba(255, 48, 85, 0.5);;
+}
+
+.search__input::-moz-placeholder {
+  color:rgba(255, 48, 85, 0.5);;
+}
+
+.search__input:-moz-placeholder {
+  color:rgba(255, 48, 85, 0.5);;
+}
+
+.search__input:-ms-input-placeholder {
+  color:rgba(255, 48, 85, 0.5);;
+}
+
 .search__submit {
   margin-left: 16px;
   padding: 8px 11px;
