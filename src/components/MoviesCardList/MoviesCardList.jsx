@@ -56,16 +56,16 @@ function MoviesCardList({arrayMovies, setArrayMovies, isSavedMovie, countRequest
             return <MoviesCard 
                       key = { id }
                       _id = { id }
-                      nameRU = { nameRU || 'none' } 
-                      nameEN = { nameEN || 'none' }
-                      duration = { duration } 
-                      image = { image }
-                      thumbnail = { thumbnail } 
+                      nameRU = { nameRU || 'Информация отсутствует' }
+                      nameEN = { nameEN || 'Информация отсутствует' }
+                      duration = { duration || 0 } 
+                      image = { image || '#'}
+                      thumbnail = { thumbnail || 0 } 
                       trailer = { trailer || `https://www.youtube.com/results?search_query=${changeStrForLink(nameRU)}+trailer` } 
-                      country = { country }
-                      director = { director }
-                      year = { year }
-                      description = { description }
+                      country = { country || 'Информация отсутствует' }
+                      director = { director || 'Информация отсутствует' }
+                      year = { year || 'Информация отсутствует' }
+                      description = { description || 'Информация отсутствует' }
                       isSavedMovie = { isSavedMovie }
                       deleteMovie = {deleteMovie} />
           })

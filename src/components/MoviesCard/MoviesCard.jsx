@@ -12,7 +12,11 @@ function MoviesCard({_id, movieId, nameRU, nameEN, image,  duration, thumbnail, 
 
       MainApi.getMovies()
       .then( movies => {
-        setLike(movies.some(movie => movie.nameRU === nameRU))
+        const findMovie = movies.find(movie => movie.nameRU === nameRU)
+        if(findMovie) {
+          setLike(true)
+          setIdAddedMovie(findMovie._id)
+        }
       })
     }
   }, [isSavedMovie, nameRU])
