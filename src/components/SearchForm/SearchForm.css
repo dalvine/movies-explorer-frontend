@@ -55,19 +55,19 @@
 }
 
 .search__input::-webkit-input-placeholder {
-  color:rgba(255, 48, 85, 0.5);;
+  color:rgba(255, 48, 85, 0.7);;
 }
 
 .search__input::-moz-placeholder {
-  color:rgba(255, 48, 85, 0.5);;
+  color:rgba(255, 48, 85, 0.7);;
 }
 
 .search__input:-moz-placeholder {
-  color:rgba(255, 48, 85, 0.5);;
+  color:rgba(255, 48, 85, 0.7);;
 }
 
 .search__input:-ms-input-placeholder {
-  color:rgba(255, 48, 85, 0.5);;
+  color:rgba(255, 48, 85, 0.7);;
 }
 
 .search__submit {
